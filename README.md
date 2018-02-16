@@ -20,7 +20,7 @@ Boilerplate para configuração rápida de containers Docker para proxy reverso 
 
 ## Créditos
 
-[Fábio Assunção](https://github.com/fabioassuncao) e todos os [contribuidores](https://github.com/codions/docker-setup/graphs/contributors).
+[Fábio Assunção](https://github.com/fabioassuncao) e todos os [contribuidores](https://github.com/codions/docker-boilerplate-server/graphs/contributors).
 
 ## Licença
 
