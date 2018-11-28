@@ -1,26 +1,28 @@
-version: '2'
-
+version: "2"
 services:
-  mysql:
-    image: codions/mysql:5.7
-    container_name: mysql
-    restart: always
-    volumes:
-      - ./data:/var/lib/mysql
-    ports:
-      - "3306:3306"
-    environment:
-      - MYSQL_USER=root
-      - MYSQL_PASSWORD=123456
-      - MYSQL_ROOT_PASSWORD=123456
-
-  phpmyadmin:
-   image: phpmyadmin/phpmyadmin
-   container_name: phpmyadmin
-   restart: always
-   environment:
-    - PMA_ARBITRARY=1
-   ports:
-    - "8082:80"
-   links:
-    - mysql
+    mysql:
+        image: mysql:5.7
+        container_name: mysql
+        restart: always
+        ports: 
+            - "9915:3306"
+        environment:
+            MYSQL_ROOT_PASSWORD: yourpasswd
+        volumes:
+            - ./data:/var/lib/mysql
+        networks:
+            - default
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        container_name: phpmyadmin
+        restart: always
+        links: 
+            - mysql:mysql
+        ports:
+            - 8082:80
+        environment:
+            PMA_ARBITRARY: 1
+            # VIRTUAL_HOST: phpmyadmin.your-website-one.tld
+            # VIRTUAL_PORT: 9000
+            # LETSENCRYPT_HOST: phpmyadmin.your-website-one.tld
+            # LETSENCRYPT_EMAIL: contact@your-website-one.tld
