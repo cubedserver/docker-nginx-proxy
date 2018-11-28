@@ -6,8 +6,14 @@ Boilerplate para configuração rápida de containers Docker para proxy reverso 
 
 1. [portainer](https://github.com/portainer/portainer)
 2. [nginx](https://github.com/nginx/nginx)
-3. [jwilder/docker-gen](https://github.com/jwilder/docker-gen)
-4. [jrcs/letsencrypt-nginx-proxy-companion](https://github.com/JrCs/docker-letsencrypt-nginx-proxy-companion)
+3. [mysql](https://hub.docker.com/r/codions/mysql/)
+4. [phpmyadmin](https://hub.docker.com/r/phpmyadmin/phpmyadmin/)
+5. [jwilder/docker-gen](https://github.com/jwilder/docker-gen)
+6. [jrcs/letsencrypt-nginx-proxy-companion](https://github.com/JrCs/docker-letsencrypt-nginx-proxy-companion)
+
+## Dicas
+
+Caso esteja procurando por script para configurações iniciais de VPS na DigitalOcean ou similares, veja o repositório [fabioassuncao/setup-vps](https://github.com/fabioassuncao/setup-vps)
 
 ## Contribuição
 
@@ -20,7 +26,7 @@ Boilerplate para configuração rápida de containers Docker para proxy reverso 
 
 ## Créditos
 
-[Fábio Assunção](https://github.com/fabioassuncao) e todos os [contribuidores](https://github.com/codions/docker-boilerplate-server/graphs/contributors).
+[Fábio Assunção](https://github.com/fabioassuncao) e todos os [contribuidores](https://github.com/fabioassuncao/docker-boilerplate-server/graphs/contributors).
 
 ## Licença
 

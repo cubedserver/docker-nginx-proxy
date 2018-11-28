@@ -5,6 +5,7 @@ services:
   portainer.app:
     image: portainer/portainer
     container_name: portainer.app
+    restart: always
     volumes:
       - ./data:/data
       - /var/run/docker.sock:/var/run/docker.sock
