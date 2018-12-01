@@ -21,7 +21,7 @@ services:
         environment:
             PMA_ARBITRARY: 1
             # VIRTUAL_HOST: phpmyadmin.your-website-one.tld
-            # VIRTUAL_PORT: 9000
+            # VIRTUAL_PORT: 80
             # LETSENCRYPT_HOST: phpmyadmin.your-website-one.tld
             # LETSENCRYPT_EMAIL: contact@your-website-one.tld
         expose:
