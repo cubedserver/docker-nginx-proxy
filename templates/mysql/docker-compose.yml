@@ -1,4 +1,4 @@
-version: "2"
+version: '3'
 services:
     mysql:
         image: mysql:5.7
@@ -26,3 +26,8 @@ services:
             # VIRTUAL_PORT: 9000
             # LETSENCRYPT_HOST: phpmyadmin.your-website-one.tld
             # LETSENCRYPT_EMAIL: contact@your-website-one.tld
+
+networks:
+  default:
+    external:
+      name: nginx-proxy

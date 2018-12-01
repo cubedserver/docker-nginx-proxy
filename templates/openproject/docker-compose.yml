@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+
+  openproject:
+    image: openproject/community
+    container_name: openproject
+    restart: always
+    volumes:
+      - ./data/app:/var/lib/postgresql/9.4/main
+      - ./data/db:/var/db/openproject
+    environment:
+        SECRET_KEY_BASE: base64:NJxqtMREXuQuoEYrDNGaMiTrFPDceVy2bBQVLB8FmfM=
+        VIRTUAL_HOST: project.codions.com
+        VIRTUAL_PORT: 80
+        LETSENCRYPT_HOST: project.codions.com
+        LETSENCRYPT_EMAIL: contato@codions.com
+
+        # SMTP configuration
+        EMAIL_DELIVERY_METHOD: smtp
+        SMTP_ADDRESS: smtp.sendgrid.net
+        SMTP_PORT: 587
+        SMTP_DOMAIN: my.domain.com
+        SMTP_AUTHENTICATION: login
+        SMTP_ENABLE_STARTTLS_AUTO: true
+        SMTP_USER_NAME: "apikey"
+        SMTP_PASSWORD: "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"
+    expose:
+      - "80"
+    ports:
+      - "8080:80"
+
+networks:
+ default:
+  external:
+   name: nginx-proxy
