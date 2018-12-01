@@ -16,8 +16,6 @@ services:
     #     LETSENCRYPT_EMAIL: email@example.com
     expose:
       - "9000"
-    ports:
-      - "9000:9000"
 
 networks:
  default:

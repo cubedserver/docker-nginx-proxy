@@ -18,14 +18,14 @@ services:
         restart: always
         links: 
             - mysql:mysql
-        ports:
-            - 8082:80
         environment:
             PMA_ARBITRARY: 1
             # VIRTUAL_HOST: phpmyadmin.your-website-one.tld
             # VIRTUAL_PORT: 9000
             # LETSENCRYPT_HOST: phpmyadmin.your-website-one.tld
             # LETSENCRYPT_EMAIL: contact@your-website-one.tld
+        expose:
+          - "80"
 
 networks:
   default:
