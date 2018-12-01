@@ -1,15 +1,16 @@
-# Docker boilerplate server
+# Docker-compose templates
 
-Boilerplate para configuração rápida de containers Docker para proxy reverso com nginx, configuração automática de virtualhosts e geração de certificados SSL com Let's Encrypt.
+Templates para configuração rápida de containers Docker para proxy reverso com nginx, configuração automática de virtualhosts e geração de certificados SSL com Let's Encrypt, além de alguns outros utilitários.
 
 ## Imagens utilizadas
 
 1. [portainer](https://github.com/portainer/portainer)
-2. [nginx](https://github.com/nginx/nginx)
-3. [mysql](https://hub.docker.com/r/codions/mysql/)
-4. [phpmyadmin](https://hub.docker.com/r/phpmyadmin/phpmyadmin/)
-5. [jwilder/docker-gen](https://github.com/jwilder/docker-gen)
-6. [jrcs/letsencrypt-nginx-proxy-companion](https://github.com/JrCs/docker-letsencrypt-nginx-proxy-companion)
+2. [nextcloud](https://github.com/nextcloud/server)
+3. [nginx](https://github.com/nginx/nginx)
+4. [mysql](https://hub.docker.com/r/codions/mysql/)
+5. [phpmyadmin](https://hub.docker.com/r/phpmyadmin/phpmyadmin/)
+6. [jwilder/docker-gen](https://github.com/jwilder/docker-gen)
+7. [jrcs/letsencrypt-nginx-proxy-companion](https://github.com/JrCs/docker-letsencrypt-nginx-proxy-companion)
 
 ## Dicas
 

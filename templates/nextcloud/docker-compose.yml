@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  cloud.codions.com:
+    image: nextcloud
+    container_name: cloud.codions.com
+    volumes:
+      - ./data:/var/www/html/data
+      - ./config:/var/www/html/config
+      - ./custom_apps:/var/www/html/custom_apps
+    environment:
+        VIRTUAL_HOST: cloud.your-website-one.tld
+        LETSENCRYPT_HOST: cloud.your-website-one.tld
+        LETSENCRYPT_EMAIL: contact@your-website-one.tld
+    expose:
+        - "80"
+        - "443"
+    restart: always
+
+networks:
+ default:
+  external:
+   name: nginx-proxy
