@@ -1,34 +1,42 @@
-# Docker-compose templates
+# NGINX Boilerplate Proxy
 
-Templates para configuração rápida de containers Docker para proxy reverso com nginx, configuração automática de virtualhosts e geração de certificados SSL com Let's Encrypt, além de alguns outros utilitários.
+<div align="center">
+  <img src="examples/cover.svg" loading="lazy" />
+</div>
 
-## Imagens utilizadas
+Boilerplate for quick configuration of Docker containers for reverse proxy with [NGINX](https://github.com/nginx/nginx), automatic configuration of virtualhosts and generation of SSL certificates with Let's Encrypt.
 
-1. [portainer](https://github.com/portainer/portainer)
-2. [nextcloud](https://github.com/nextcloud/server)
-3. [nginx](https://github.com/nginx/nginx)
-4. [mysql](https://hub.docker.com/r/codions/mysql/)
-5. [phpmyadmin](https://hub.docker.com/r/phpmyadmin/phpmyadmin/)
-6. [jwilder/docker-gen](https://github.com/jwilder/docker-gen)
-7. [jrcs/letsencrypt-nginx-proxy-companion](https://github.com/JrCs/docker-letsencrypt-nginx-proxy-companion)
+## Requirements
 
-## Dicas
+* Docker 19.03 or higher
+* Docker Compose 1.27 or higher
 
-Caso esteja procurando por script para configurações iniciais de VPS na DigitalOcean ou similares, veja o repositório [fabioassuncao/setup-vps](https://github.com/fabioassuncao/setup-vps)
+## Installation
 
-## Contribuição
+1. [Download](https://github.com/fabioassuncao/docker-boilerplate-nginx-proxy/archive/master.zip) the latest version
+2. Create a new Docker network called `web`
+3. Create a new Docker network called `internal`
+4. Running the Traefik Container: `docker-compose up -d`
 
-1. Fork este repositório!
-2. Crie sua feature a partir da branch **develop**: `git checkout -b feature/my-new-feature`
-3. Escreva e comente seu código.
-4. Commit suas alterações: `git commit -am 'Add some feature'`
-5. Faça um `push` para a branch: `git push origin feature/my-new-feature`
-6. Faça um `pull request` para a branch **develop**
+## Tips
 
-## Créditos
+If you are looking for a script for initial server settings on DigitalOcean, Linone, AWS EC2 or similar, see the repository [fabioassuncao/setup-vps](https://github.com/fabioassuncao/setup-vps)
 
-[Fábio Assunção](https://github.com/fabioassuncao) e todos os [contribuidores](https://github.com/fabioassuncao/docker-boilerplate-server/graphs/contributors).
+## Contributing
 
-## Licença
+1. Fork this repository!
+2. Create your feature from the **develop** branch: git checkout -b feature/my-new-feature
+3. Write and comment your code
+4. Commit your changes: `git commit -am 'Add some feature'`
+5. Push the branch: `git push origin feature/my-new-feature`
+6. Make a pull request to the branch **develop**
 
-Licenciado sob a licença MIT.
+## Credits
+
+* [Fábio Assunção](https://github.com/fabioassuncao)
+* [All Contributors](../../contributors)
+
+
+## License
+
+Licensed under the MIT License.s
