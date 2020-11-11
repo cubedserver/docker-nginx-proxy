@@ -12,8 +12,6 @@ services:
     image: phpmyadmin/phpmyadmin
     container_name: phpmyadmin
     restart: always
-    links:
-      - 'mysql:mysql'
     environment:
       - PMA_ARBITRARY=1
       - VIRTUAL_HOST=phpmyadmin.domain.test
@@ -25,3 +23,6 @@ services:
     networks:
       - internal
       - web
+    depends_on:
+      - mysql
+      - postgres
