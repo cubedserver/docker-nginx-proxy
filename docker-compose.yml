@@ -1,11 +1,5 @@
 version: '3'
 
-networks:
-  web:
-    external: true
-  internal:
-    external: false
-
 services:
 
   proxy-nginx:
@@ -22,9 +16,6 @@ services:
       - ./nginx-proxy/vhost.d:/etc/nginx/vhost.d:ro
       - ./nginx-proxy/certs:/etc/nginx/certs:ro
       - ./nginx-proxy/html:/usr/share/nginx/html:ro
-    networks:
-      - internal
-      - web
 
   proxy-nginx-gen:
     image: jwilder/docker-gen
@@ -38,9 +29,6 @@ services:
       - ./nginx-proxy/html:/usr/share/nginx/html
       - ./nginx-proxy/templates:/etc/docker-gen/templates:rw # curl -o templates/nginx.tmpl https://raw.githubusercontent.com/jwilder/nginx-proxy/master/nginx.tmpl
       - /var/run/docker.sock:/tmp/docker.sock:ro
-    networks:
-      - internal
-      - web
 
   proxy-letsencrypt:
     image: jrcs/letsencrypt-nginx-proxy-companion
@@ -58,6 +46,8 @@ services:
       - DEFAULT_EMAIL=email@domain.test
       - NGINX_DOCKER_GEN_CONTAINER="proxy-nginx-gen"
       - NGINX_PROXY_CONTAINER="proxy-nginx"
-    networks:
-      - internal
-      - web
+
+networks:
+  default:
+    external:
+      name: web
