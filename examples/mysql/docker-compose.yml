@@ -1,11 +1,5 @@
 version: '3'
 
-networks:
-  web:
-    external: true
-  internal:
-    external: false
-
 services:
 
   mysql:
@@ -18,5 +12,8 @@ services:
       - MYSQL_ROOT_PASSWORD=your_secure_password
     volumes:
       - './data:/var/lib/mysql'
-    networks:
-      - internal
+
+networks:
+  default:
+    external:
+      name: web

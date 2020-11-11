@@ -1,11 +1,5 @@
 version: '3'
 
-networks:
-  web:
-    external: true
-  internal:
-    external: false
-
 services:
 
   redis:
@@ -19,5 +13,8 @@ services:
       - "6379:6379"
     environment:
       - REDIS_PORT=6379
-    networks:
-      - internal
+
+networks:
+  default:
+    external:
+      name: web

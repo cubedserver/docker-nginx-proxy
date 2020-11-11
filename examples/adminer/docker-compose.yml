@@ -1,11 +1,5 @@
 version: "3"
 
-networks:
-  web:
-    external: true
-  internal:
-    external: false
-
 services:
 
   adminer:
@@ -17,9 +11,11 @@ services:
       - LETSENCRYPT_EMAIL=email@domain.test
     expose:
       - "8080"
-    networks:
-      - internal
-      - web
     depends_on:
       - mysql
       - postgres
+
+networks:
+  default:
+    external:
+      name: web

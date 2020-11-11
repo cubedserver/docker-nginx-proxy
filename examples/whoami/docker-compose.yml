@@ -1,11 +1,5 @@
 version: "3"
 
-networks:
-  web:
-    external: true
-  internal:
-    external: false
-
 services:
 
   whoami:
@@ -17,6 +11,8 @@ services:
       - LETSENCRYPT_EMAIL=email@domain.test
     expose:
       - "8000"
-    networks:
-      - internal
-      - web
+
+networks:
+  default:
+    external:
+      name: web
