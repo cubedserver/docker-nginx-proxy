@@ -16,7 +16,7 @@ Boilerplate for quick configuration of Docker containers for reverse proxy with 
 1. [Download](https://github.com/fabioassuncao/docker-boilerplate-nginx-proxy/archive/master.zip) the latest version
 2. Create a new Docker network called `web`
 3. Create a new Docker network called `internal`
-4. Running the Traefik Container: `docker-compose up -d`
+4. Running the Proxy Containers: `docker-compose up -d`
 
 ## Tips
 
