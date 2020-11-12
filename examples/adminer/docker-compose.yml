@@ -11,9 +11,6 @@ services:
       - LETSENCRYPT_EMAIL=email@domain.test
     expose:
       - "8080"
-    depends_on:
-      - mysql
-      - postgres
 
 networks:
   default:
