@@ -3,17 +3,19 @@ version: '3'
 services:
 
   mysql:
-    image: 'mysql:5.7'
+    image: mysql:5.7
     container_name: mysql
     restart: always
-    ports:
-      - '3306:3306'
     environment:
       - MYSQL_ROOT_PASSWORD=your_secure_password
     volumes:
-      - './data:/var/lib/mysql'
+      - ./data:/var/lib/mysql
+    ports:
+      - '3306:3306'
+    networks:
+      - default
 
 networks:
   default:
     external:
-      name: web
+      name: nginx-proxy
