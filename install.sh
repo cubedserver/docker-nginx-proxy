@@ -2,7 +2,7 @@
 
 : ${DOCKER_NETWORKS:='nginx-proxy,internal'}
 : ${DOCKER_COMPOSE_FILE:='docker-compose.yml'}
-: ${APP_TEMPLATES:='adminer,mysql,phpmyadmin,portainer,postgres,redis,whoami'}
+: ${APP_TEMPLATES:='portainer,mysql,postgres,redis,adminer,phpmyadmin,whoami'}
 : ${DEFAULT_WORKDIR:=`pwd`}
 
 function setup_log() {
