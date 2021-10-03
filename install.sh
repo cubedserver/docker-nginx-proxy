@@ -1,10 +1,11 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-DOCKER_NETWORKS="nginx-proxy internal"
-DOCKER_COMPOSE_FILE="docker-compose.yml"
+: ${DOCKER_NETWORKS:='nginx-proxy internal'}
+: ${DOCKER_COMPOSE_FILE:='docker-compose.yml'}
+: ${ADDITIONAL_APPS:='adminer mysql phpmyadmin portainer postgres redis whoami'}
 
 function setup_log() {
-  echo -e "\033[1;32m$*\033[m"
+  echo -e $1
 }
 
 for NETWORK_NAME in $DOCKER_NETWORKS; do
@@ -13,3 +14,15 @@ for NETWORK_NAME in $DOCKER_NETWORKS; do
 done
 
 docker-compose -f $DOCKER_COMPOSE_FILE up -d
+
+if [[ ! -z $ADDITIONAL_APPS ]]; then
+    for APP in $ADDITIONAL_APPS; do
+        if [ -d templates/${APP} ]; then
+
+            setup_log "---> ⚡ Starting ${APP} container"
+            docker-compose -f templates/${APP}/docker-compose.yml up -d
+        else
+            setup_log "---> ❌ App ${APP} files not found. Skipping..."
+        fi
+    done    
+fi

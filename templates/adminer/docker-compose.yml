@@ -3,13 +3,13 @@ version: "3"
 services:
 
   adminer:
-    image: adminer:4.7.7
+    image: adminer:latest
     container_name: adminer
     environment:
-      - VIRTUAL_HOST=adminer.domain.test
+      - VIRTUAL_HOST=adminer.yourdomain.com
       - VIRTUAL_PORT=8080
-      - LETSENCRYPT_HOST=adminer.domain.test
-      - LETSENCRYPT_EMAIL=email@domain.test
+      - LETSENCRYPT_HOST=adminer.yourdomain.com
+      - LETSENCRYPT_EMAIL=email@yourdomain.com
     expose:
       - "8080"
 

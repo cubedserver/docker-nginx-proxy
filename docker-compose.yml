@@ -1,4 +1,4 @@
-version: '3'
+version: "3.3"
 
 services:
 
@@ -41,7 +41,7 @@ services:
       - ./data/certs:/etc/nginx/certs:rw
       - /var/run/docker.sock:/var/run/docker.sock:ro
     environment:
-      - DEFAULT_EMAIL=email@domain.test
+      - DEFAULT_EMAIL=email@yourdomain.com
       - NGINX_DOCKER_GEN_CONTAINER=nginx-gen
       - NGINX_PROXY_CONTAINER=nginx
 
