@@ -1,10 +1,10 @@
-# NGINX Boilerplate Proxy
+# NGINX Proxy
 
 <div align="center">
-  <img src="examples/cover.svg" loading="lazy" />
+  <img src="templates/screen.svg" loading="lazy" />
 </div>
 
-Boilerplate for quick configuration of Docker containers for reverse proxy with [NGINX](https://github.com/nginx/nginx), automatic configuration of virtualhosts and generation of SSL certificates with Let's Encrypt.
+Template for quick configuration of Docker containers for reverse proxy with [NGINX](https://github.com/nginx/nginx), automatic configuration of virtualhosts and generation of SSL certificates with Let's Encrypt.
 
 ## Requirements
 
@@ -13,7 +13,7 @@ Boilerplate for quick configuration of Docker containers for reverse proxy with 
 
 ## Installation
 
-1. [Download](https://github.com/cubedserver/docker-boilerplate-nginx-proxy/archive/master.zip) the latest version
+1. [Download](https://github.com/cubedserver/docker-nginx-proxy/archive/master.zip) the latest version
 2. Create a new Docker network called `nginx-proxy`
 3. Running the Proxy Containers: `docker-compose up -d`
 
