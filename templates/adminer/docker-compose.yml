@@ -6,10 +6,10 @@ services:
     image: adminer:latest
     container_name: adminer
     environment:
-      - VIRTUAL_HOST=adminer.yourdomain.com
+      - VIRTUAL_HOST=adminer.yourdomain.local
       - VIRTUAL_PORT=8080
-      - LETSENCRYPT_HOST=adminer.yourdomain.com
-      - LETSENCRYPT_EMAIL=email@yourdomain.com
+      - LETSENCRYPT_HOST=adminer.yourdomain.local
+      - LETSENCRYPT_EMAIL=email@yourdomain.local
     expose:
       - "8080"
 

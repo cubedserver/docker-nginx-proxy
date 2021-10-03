@@ -6,10 +6,10 @@ services:
     image: jwilder/whoami
     container_name: whoami
     environment:
-      - VIRTUAL_HOST=whoami.yourdomain.com
+      - VIRTUAL_HOST=whoami.yourdomain.local
       - VIRTUAL_PORT=8000
-      - LETSENCRYPT_HOST=whoami.yourdomain.com
-      - LETSENCRYPT_EMAIL=email@yourdomain.com
+      - LETSENCRYPT_HOST=whoami.yourdomain.local
+      - LETSENCRYPT_EMAIL=email@yourdomain.local
     expose:
       - "8000"
 

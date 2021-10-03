@@ -10,10 +10,10 @@ services:
       - ./data:/data
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
-      - VIRTUAL_HOST=portainer.yourdomain.com
+      - VIRTUAL_HOST=portainer.yourdomain.local
       - VIRTUAL_PORT=9000
-      - LETSENCRYPT_HOST=portainer.yourdomain.com
-      - LETSENCRYPT_EMAIL=email@yourdomain.com
+      - LETSENCRYPT_HOST=portainer.yourdomain.local
+      - LETSENCRYPT_EMAIL=email@yourdomain.local
     expose:
       - "9000"
     ports:
