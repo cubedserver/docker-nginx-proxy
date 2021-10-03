@@ -11,14 +11,13 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - VIRTUAL_HOST=portainer.domain.test
-      - VIRTUAL_PORT=8000
+      - VIRTUAL_PORT=9000
       - LETSENCRYPT_HOST=portainer.domain.test
       - LETSENCRYPT_EMAIL=email@domain.test
     expose:
-      - "8000"
+      - "9000"
     ports:
-      - "8000:8000"
-      - "9443:9443"
+      - "9000:9000"
 
 networks:
   default:
