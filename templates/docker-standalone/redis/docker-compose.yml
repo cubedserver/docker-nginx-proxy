@@ -8,7 +8,7 @@ services:
     restart: always
     command: --appendonly yes --requirepass your_secure_password
     volumes:
-      - ./data:/data
+      - redis-data:/data
     ports:
       - "6379:6379"
     environment:
@@ -20,3 +20,6 @@ networks:
   default:
     external:
       name: nginx-proxy
+
+volumes:
+  redis-data:

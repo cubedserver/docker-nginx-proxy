@@ -7,7 +7,7 @@ services:
     container_name: portainer
     restart: always
     volumes:
-      - ./data:/data
+      - portainer-data:/data
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - VIRTUAL_HOST=portainer.yourdomain.local
@@ -23,3 +23,6 @@ networks:
   default:
     external:
       name: nginx-proxy
+
+volumes:
+  portainer-data:

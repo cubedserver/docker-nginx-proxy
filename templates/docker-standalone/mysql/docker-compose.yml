@@ -9,7 +9,7 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=your_secure_password
     volumes:
-      - ./data:/var/lib/mysql
+      - mysql-data:/var/lib/mysql
     ports:
       - '3306:3306'
     networks:
@@ -19,3 +19,6 @@ networks:
   default:
     external:
       name: nginx-proxy
+
+volumes:
+  mysql-data:
