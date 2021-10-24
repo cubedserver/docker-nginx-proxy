@@ -13,7 +13,7 @@ Template for quick configuration of Docker containers for reverse proxy with [NG
 
 ## Installation
 
-1. [Download](https://github.com/cubedserver/docker-nginx-proxy/archive/master.zip) the latest version
+1. [Download](https://github.com/cubedserver/docker-nginx-proxy/archive/main.zip) the latest version
 2. Create a new Docker network called `nginx-proxy`
 3. Running the Proxy Containers: `docker-compose up -d`
 

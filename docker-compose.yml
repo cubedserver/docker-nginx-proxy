@@ -27,7 +27,7 @@ services:
       - ./data/vhost.d:/etc/nginx/vhost.d
       - ./data/html:/usr/share/nginx/html
       - ./data/certs:/etc/nginx/certs:ro
-      - ./data/templates/nginx.tmpl:/etc/docker-gen/templates/nginx.tmpl:ro # https://github.com/nginx-proxy/nginx-proxy/blob/master/nginx.tmpl
+      - ./data/templates/nginx.tmpl:/etc/docker-gen/templates/nginx.tmpl:ro # https://github.com/nginx-proxy/nginx-proxy/blob/main/nginx.tmpl
       - /var/run/docker.sock:/tmp/docker.sock:ro
 
   nginx-letsencrypt:
